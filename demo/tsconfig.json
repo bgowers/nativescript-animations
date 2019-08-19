@@ -23,10 +23,10 @@
 	"exclude": [
 		"node_modules",
 		"platforms",
-		"../src/node_modules"
+		"../plugin/node_modules"
 	],
 	"include": [
-		"../src",
+		"../plugin",
 		"**/*"
 	]
 }

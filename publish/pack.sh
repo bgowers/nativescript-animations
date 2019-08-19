@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR=../src;
+SOURCE_DIR=../plugin;
 TO_SOURCE_DIR=src;
 PACK_DIR=package;
 ROOT_DIR=..;
