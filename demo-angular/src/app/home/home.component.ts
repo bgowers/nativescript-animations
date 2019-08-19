@@ -1,4 +1,4 @@
-import { NativescriptChildAnimations } from 'nativescript-child-animations';
+import { animateChildren } from 'nativescript-child-animations';
 import { Component, OnInit } from '@angular/core';
 import { Page } from 'tns-core-modules/ui/page/page';
 import { FlexboxLayout } from 'tns-core-modules/ui/layouts/flexbox-layout/flexbox-layout';
@@ -13,7 +13,7 @@ import { AnimationCurve } from 'tns-core-modules/ui/enums';
 })
 export class HomeComponent implements OnInit {
     parentView: FlexboxLayout | StackLayout;
-    animator = new NativescriptChildAnimations();
+    // animator = new NativescriptChildAnimations();
     animationDef: AnimationDefinition = {
         translate: { x: 0, y: 0 },
         duration: 1000,
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     ngOnInit(): void {
         this.page.on('navigatedTo', () => {
             this.parentView = this.page.getViewById('parent');
-            this.animator.animateChildren(this.parentView, this.animationDef, 70, true);
+            animateChildren(this.parentView, this.animationDef, 70, true);
         });
     }
 }

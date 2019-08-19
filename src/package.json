@@ -1,8 +1,8 @@
 {
 	"name": "nativescript-child-animations",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "A small plugin for quickly applying the same animation too all child elements of a specified parent.",
-	"main": "nativescript-animations",
+	"main": "nativescript-animations.common.ts",
 	"typings": "index.d.ts",
 	"nativescript": {
 		"platforms": {
@@ -28,14 +28,15 @@
 		"demo-angular.ios": "npm run tsc && cd ../demo-angular && tns run ios --emulator",
 		"demo-angular.android": "npm run tsc && cd ../demo-angular && tns run android --emulator",
 		"demo-angular.reset": "cd ../demo-angular && npx rimraf -- hooks node_modules platforms package-lock.json",
-		"plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-animations && tns plugin add ../src && cd ../demo-angular && tns plugin remove nativescript-animations && tns plugin add ../src",
+		"plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-child-animations && tns plugin add ../src && cd ../demo-angular && tns plugin remove nativescript-child-animations && tns plugin add ../src",
 		"clean": "npm run demo.reset && npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i"
 	},
 	"keywords": [
 		"NativeScript",
 		"JavaScript",
 		"Android",
-		"iOS"
+		"iOS",
+		"Animation"
 	],
 	"author": {
 		"name": "Benjamin Gowers",

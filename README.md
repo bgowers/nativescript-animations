@@ -18,19 +18,14 @@ This child animations package works by supplying a function with : a parent (con
 
 1. Import NativescriptChildAnimations module in the component that you'd like to use it in:
 
-```typescript
-import { NativescriptChildAnimations } from 'nativescript-child-animations';
-```
+    ```typescript
+    import { animateChildren } from 'nativescript-child-animations';
+    ```
 
-2. Initialise an 'animator' in your component to use the animations module:
-```typescript
-animator = new NativescriptChildAnimations();
-```
-
-3. Call the `animateChildren()` function with params:
-```typescript
-this.animator.animateChildren(parentView, animationDef, 70);
-```
+2. Call the `animateChildren()` function with params:
+    ```typescript
+    animateChildren(parentView, animationDef, 70);
+    ```
 
 ### Example
 
@@ -47,7 +42,7 @@ example.component.html
 example.component.ts
 
 ```typescript
-import { NativescriptChildAnimations } from 'nativescript-child-animations';
+import { animateChildren } from 'nativescript-child-animations';
 import { Component, OnInit } from '@angular/core';
 import { Page } from 'tns-core-modules/ui/page/page';
 import { FlexboxLayout } from 'tns-core-modules/ui/layouts/flexbox-layout/flexbox-layout';
@@ -74,7 +69,7 @@ export class HomeComponent implements OnInit {
     ngOnInit(): void {
         this.page.on('navigatedTo', () => {
             this.parentView = this.page.getViewById('parent');
-            this.animator.animateChildren(this.parentView, this.animationDef, 70, true);
+            animateChildren(this.parentView, this.animationDef, 70, true);
         });
     }
 }
