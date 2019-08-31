@@ -1,6 +1,6 @@
 {
 	"name": "nativescript-child-animations",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "A small plugin for quickly applying the same animation too all child elements of a specified parent.",
 	"main": "dist/nativescript-animations.common.js",
 	"typings": "dist/nativecript-animations.common.d.ts",

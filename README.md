@@ -2,6 +2,8 @@
 
 A small nativescript plugin that makes it easier to animate multiple child elements.
 
+<img src="example.gif" width="250"/>
+
 ## Installation
 
 In your nativescript source directory, run:
@@ -57,7 +59,6 @@ import { AnimationCurve } from 'tns-core-modules/ui/enums';
 })
 export class HomeComponent implements OnInit {
     parentView: FlexboxLayout | StackLayout;
-    animator = new NativescriptChildAnimations();
     animationDef: AnimationDefinition = {
         translate: { x: 0, y: 0 },
         duration: 1000,
